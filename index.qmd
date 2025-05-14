@@ -26,12 +26,15 @@ from io import StringIO
 
 # Captain Bytebeard’s Treasure Hunt 🏴‍☠️
 
-## Ahoy, mateys! You are part of Captain Bytebeard’s crew, sailing across the Code Seas to recover the legendary Lost Treasure of Variable Island. But beware: the map is encrypted, the compass is buggy, and cursed data structures lie ahead...
+## AHOY THERE, YE CODE LUBBERS!
+
+Ye be part o' CAPTAIN BYTEBEARD'S fearsome crew, sailin' across the treacherous CODE SEAS to recover the legendary LOST TREASURE OF VARIABLE ISLAND!
 
 ![](gif/ship-water.gif){fig-align="center"}
 
-Complete the 4 coding challenges below to uncover the secret treasure code.
+But mark me words, ye scallywags - danger lurks in these digital waters! The map be ENCRYPTED with ancient ciphers, the compass be BUGGY and spinnin' like a drunken sailor, and CURSED DATA STRUCTURES lie in wait to drag unwary coders to the depths!
 
+Only the bravest and cleverest of sea dogs will navigate these perilous challenges and claim the bounty of perfect code that awaits! Those with weak algorithms be warned - this voyage ain't for the faint of heart! and cursed data structures lie ahead...
 
 ### Hint 1: 🗺 Map of the Four Elements
 You've found a legendary pirate's map. But the coordinates of the Lost Treasure are encrypted. Sort the coordinates alphabetically and extract the first letter of each item. Count how many times each direction appears.
@@ -95,7 +98,7 @@ print(get_direction([your number here]))
 
 ### Hint 3:💰 The Pirate’s Ledger
 
-Captain Bytebeard wants to know the pirate who collected the most total gold (doesn't tell you why). Print the amount of gold collected by that pirate.
+Captain Bytebeard wants to know the pirate who collected the most gold in total (doesn't tell you why). Print the amount of gold collected by that pirate.
 
 ![](gif/treasure.gif){fig-align="center"}
 
