@@ -1,0 +1,229 @@
+---
+title: "Captain Bytebeard’s Treasure Hunt"
+author: "Dr. Bartosiak"
+format: 
+  live-html:
+    theme: sketchy
+pyodide:
+  packages:
+    - seaborn
+editor_options: 
+  chunk_output_type: console
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{pyodide}
+#| autorun: true
+#| startover: false
+#| edit: false
+#| runbutton: false
+#| echo: false
+import sys
+from io import StringIO
+
+```
+
+# Captain Bytebeard’s Treasure Hunt 🏴‍☠️
+
+## Ahoy, mateys! You are part of Captain Bytebeard’s crew, sailing across the Code Seas to recover the legendary Lost Treasure of Variable Island. But beware: the map is encrypted, the compass is buggy, and cursed data structures lie ahead...
+
+![](gif/ship-water.gif){fig-align="center"}
+
+Complete the 4 coding challenges below to uncover the secret treasure code.
+
+
+### Hint 1: 🗺 Map of the Four Elements
+You've found a legendary pirate's map. But the coordinates of the Lost Treasure are encrypted. Sort the coordinates alphabetically and extract the first letter of each item. Count how many times each direction appears.
+
+![](images/map.jpg){fig-align="center"}
+
+Sort the output in the following format: `L0L0L0L0` where:
+
+* L - letter of the coordinate (in alphabetical order)
+* 0 - number how many times the direction appears
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+
+directions = ["South", "East", "South", "West", "South", "North", "West", "North", "East", "South", "North"]
+
+# Your code here
+```
+
+
+### Hint 2: ⚓ The Buggy Compass
+
+You've got the map set, but your compass points the wrong way. Fix it!
+
+![](gif/compass.gif){fig-align="center"}
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+
+def get_direction(angle):
+    if angle = 90
+        return "North"
+    elif angle < 180
+        return "East"
+    elif angle > 270
+        return "South"
+    else
+        return "West"
+```
+
+You have multiple readings, but you only need the average heading to continue the journey.
+
+Calculate the average heading (between 0–360 degrees). Run your `get_direction` function to see where you're heading!
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+
+headings = [30, 44, 73, 90, 103, 124, 150, 187, 210, 243, 270, 291, 334]
+
+# Your code here
+
+print(get_direction([your number here]))
+```
+
+
+### Hint 3:💰 The Pirate’s Ledger
+
+Captain Bytebeard wants to know the pirate who collected the most total gold (doesn't tell you why). Print the amount of gold collected by that pirate.
+
+![](gif/treasure.gif){fig-align="center"}
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+
+ledger = [
+    {"pirate": "Anne", "gold": 50},
+    {"pirate": "Jack", "gold": 80},
+    {"pirate": "Anne", "gold": 70},
+    {"pirate": "Calico", "gold": 95},
+    {"pirate": "Jack", "gold": 40},
+    {"pirate": "Mary", "gold": 65},
+    {"pirate": "Charles", "gold": 110},
+    {"pirate": "Anne", "gold": 30},
+    {"pirate": "Calico", "gold": 85},
+    {"pirate": "Mary", "gold": 90},
+    {"pirate": "Jack", "gold": 25},
+    {"pirate": "Blackbeard", "gold": 120},
+    {"pirate": "Blackbeard", "gold": 60},
+    {"pirate": "Stede", "gold": 45},
+    {"pirate": "Vane", "gold": 100}
+]
+```
+
+### Hint 4:🦜 Polly’s Secret Code
+
+Polly the Parrot squawked a strange set of words, all out of order. Captain Bytebeard the code can make sense of them.
+
+![](images/polly.jpg){width=200 fig-align="center"}
+
+First, decode Polly’s words using the codebook. Then, reorder them using a secret index list found carved into the mast:
+
+🪵 Secret Order: [2, 5, 0, 6, 1, 7, 4, 3, 8]
+
+Finally, find the second-to-last word in the final decoded sentence.
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+
+# Polly’s scrambled message (words are out of order!)
+scrambled_message = "sand squawk blarg island sparkle treasure sky blue zip"
+
+# Secret pirate code dictionary (unordered)
+code = {
+    "treasure": "cave",
+    "blue": "hidden",
+    "blarg": "the",
+    "sky": "beneath",
+    "zip": "ahoy",
+    "sparkle": "cristal",
+    "sand": "is",
+    "squawk": "the",
+    "island": "waterfall"
+}
+
+# Secret order carved into the mast
+order = [2, 5, 0, 6, 1, 7, 4, 3, 8]
+
+# Step 1: Unscramble the message using the order list
+# Step 2: Decode each word using the code dictionary
+# Step 3: Print the third-to-last word in the final message
+```
+
+
+### ☠️ The Treasure Chest
+You've found the chest but it is protected by a password. Use the 4 clues from the challenges:
+
+* First clue from Hint 1: Sorted coordinates and counts
+* Second clue from Hint 2: The average heading (as integer, not float)
+* Third clue from Hint 3: The total gold of the richest pirate
+* Fourth clue from Hin 4: The word from Polly’s message
+
+Form the final code (`1_2_3_4`) to unlock the treasure chest and claim your prize!
+
+
+```{pyodide}
+#| autorun: true
+#| startover: false
+#| edit: false
+#| runbutton: false
+#| echo: false
+
+def check_treasure_code(user_code):
+
+    if user_code == "E2N3S4W2_165_180_waterfall":
+        print("""
+        🎉🏴‍☠️  TREASURE UNLOCKED  🏴‍☠️🎉
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         You've found the Lost Treasure of Variable Island!
+           💰  💎  🗺️  🏆  🏴‍☠️  ⚓
+        """)
+    else:
+        print("The lock won’t budge. Try another code!")
+```
+
+```{pyodide}
+#| startover: false
+#| autorun: false
+#| min-lines: 3
+
+check_treasure_code([yourcode])
+
+```
+
+
+::: disclaimer
+<p><strong>Images and GIFs Disclaimer:</strong> Some of the images and GIFs used on this website are not owned by me. They are used for educational and illustrative purposes only. All rights belong to their respective owners. If you believe any content violates copyright, please contact me for prompt removal.</p>
+:::
+
+```{=html}
+<style>
+.disclaimer {
+  font-size: 0.8em;
+  color: #666;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+</style>
+```
+
+```{=html}
+<div>
+  {{< include footer.html >}}
+</div>
+```
